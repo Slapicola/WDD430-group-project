@@ -5,3 +5,4 @@ Sophia Lapicola
 Emmanuel Ologe
 Edward Griffeth
 Jared Morillo
+Adams Oyama

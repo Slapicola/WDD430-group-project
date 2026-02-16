@@ -1,43 +1,53 @@
 import Image from "next/image";
-import { Metadata } from "next";
-import ItemCardWrapper from "./ui/homepage/item-cards";
-import styles from "@/app/ui/home.module.css";
-
-export const metadata: Metadata = {
-  title: "Home Page - Handcrafted Haven",
-};
 
 export default function Home() {
   return (
-    <main className={styles.body}>
-      <div className={styles.header}>
-        <h1>Handcrafted Haven</h1>
-        <div className={styles.profile}>
-          <button className={styles.signOutBtn}>
-            <div>Sign Out</div>
-          </button>
-          <Image
-            src="/profile-icon.jpg"
-            width={100}
-            height={100}
-            alt="Profile Icon"
-          />
+    <>
+      {/* Hero Section */}
+      <section className="bg-white border-b border-[var(--color-border)]">
+        <div className="container-default py-20 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Discover Handcrafted Excellence
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg text-[var(--color-muted)] mb-8">
+            Explore unique, artisan-made products crafted with passion and
+            purpose. Support local creators and embrace sustainable shopping.
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <a href="/products" className="btn-primary">
+              Browse Products
+            </a>
+            <a href="/register" className="btn-outline">
+              Become a Seller
+            </a>
+          </div>
         </div>
-      </div>
-      {/* This will be a card that is rendered for each item in our database */}
-      {/* <div>
-        <Image
-          src="/image-placeholder.jpg"
-          width={300}
-          height={100}
-          alt="Placeholder Image"
-        />
-        <p>Description</p>
-        <p>Price</p>
-      </div> */}
-      <div className={styles.itemDisplay}>
-        <ItemCardWrapper />
-      </div>
-    </main>
+      </section>
+
+      {/* Featured Section Placeholder */}
+      <section className="container-default py-16">
+        <h2 className="text-2xl font-semibold mb-8">Featured Creations</h2>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3].map((item) => (
+            <div key={item} className="card p-4">
+              <Image
+                src="/images/clay-pot.jpg"
+                alt="Sample handcrafted product"
+                width={400}
+                height={300}
+                className="rounded-lg mb-4"
+              />
+              <h3 className="font-medium mb-2">Artisan Product</h3>
+              <p className="text-sm text-[var(--color-muted)] mb-2">
+                Beautifully handcrafted item made with care.
+              </p>
+              <p className="font-semibold">$49.99</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

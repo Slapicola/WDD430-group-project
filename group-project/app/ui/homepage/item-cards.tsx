@@ -6,6 +6,7 @@ export default async function ItemCardWrapper() {
   return (
     <Card
       image="/image-placeholder.jpg"
+      product_name="A Product Name"
       description="This is an item description"
       price={10.0}
     />
@@ -14,16 +15,19 @@ export default async function ItemCardWrapper() {
 
 export function Card({
   image,
+  product_name,
   description,
   price,
 }: {
   image: string;
+  product_name: string;
   description: string;
   price: number;
 }) {
   return (
     <div>
       <Image src={image} width={300} height={100} alt="Placeholder Image" />
+      <h2>{product_name}</h2>
       <p> Item Description: {description}</p>
       <p> Price: ${price}</p>
     </div>

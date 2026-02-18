@@ -38,7 +38,7 @@ export function Card({
   price: number;
 }) {
   return (
-    <div className="product-card">
+    <div className="product-card p-5">
       <Image src={image} width={300} height={100} alt="Placeholder Image" />
       <h2>{product_name}</h2>
       <h2>Creator: {seller}</h2>

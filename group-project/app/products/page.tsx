@@ -1,19 +1,16 @@
-import Image from "next/image";
-import Search from "../ui/search";
-import ItemCardWrapper from "../ui/product-card";
+import ProductFilter from "../ui/search";
 
-export default function ProductPage() {
+export default async function ProductPage() {
   return (
     <>
+      <div className="container-default"></div>
       <section>
-        {/* Search Bar */}
-        <Search placeholder="Search for a Creation..." />
-      </section>
-
-      {/* Item display */}
-      <section>
-        <ItemCardWrapper />
+        {/* Filters */}
+        <ProductFilter/>
       </section>
     </>
-  );
+)
 }
+
+
+

@@ -1,16 +1,26 @@
-// Do something with grids?
-//Cant really do anything until database is set up but I could possibly write the code still?
+"use client";
+
+import { seedProductItems } from "@/app/lib/data";
 import Image from "next/image";
 
-export default async function ItemCardWrapper() {
+export default function ItemCardWrapper() {
   return (
-    <Card
-      image="/image-placeholder.jpg"
-      product_name="A Product Name"
-      seller="A seller"
-      description="This is an item description"
-      price={10.0}
-    />
+    <>
+      <div className="product-grid">
+        {seedProductItems.map((product, index) => {
+          return (
+            <Card
+              key={index}
+              image={product.imageUrl}
+              product_name={product.productName}
+              seller={product.creatorName}
+              description={product.description}
+              price={product.price}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 }
 
@@ -28,18 +38,12 @@ export function Card({
   price: number;
 }) {
   return (
-    <div>
+    <div className="product-card">
       <Image src={image} width={300} height={100} alt="Placeholder Image" />
       <h2>{product_name}</h2>
-      <h2>{seller}</h2>
+      <h2>Creator: {seller}</h2>
       <p> Item Description: {description}</p>
       <p> Price: ${price}</p>
     </div>
   );
 }
-
-// export async function ItemGrid() {
-//   return (
-
-//   );
-// }

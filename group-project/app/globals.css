@@ -65,9 +65,16 @@
     color: var(--color-primary);
   }
 
-  .card {
+  .card, .product-card {
     @apply rounded-xl border shadow-sm hover:shadow-md transition;
     background-color: var(--color-surface);
     border-color: var(--color-border);
   }
+
+  .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
 }

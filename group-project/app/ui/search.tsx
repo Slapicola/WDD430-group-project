@@ -26,8 +26,9 @@ export default function ProductFilter() {
   })
   return (
     <div>
+      <div className="flex justify-center">
       {/* Creator Drop Down */}
-      <label htmlFor="dropDown">Creator:</label>
+      <label htmlFor="dropDown">Creator: </label>
       <select
         value={selectedCreator}
         onChange={(e) => setSelectedCreator(e.target.value)}
@@ -40,7 +41,7 @@ export default function ProductFilter() {
       </select>
 
       {/* Price DropDown */}
-      <label htmlFor="dropDown">Price:</label>
+      <label htmlFor="dropDown">Price: </label>
       <select
         value={selectedPrice}
         onChange={(e) => setSelectedPrice(e.target.value)}
@@ -51,6 +52,7 @@ export default function ProductFilter() {
           </option>
         ))}
       </select>
+      </div>
 
       <div className="product-grid">
         {filteredItems.map((product, index) => {

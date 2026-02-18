@@ -9,7 +9,7 @@ export const seedProductItems = [
   {
     creatorName: "Alex Rivera",
     productName: "Hand Carved Cooking Spoons",
-    imageUrl: "https://picsum.photos/seed/handcrafted1/800/600",
+    imageUrl: "https://example.com/images/wooden-spoon-set.jpg",
     description:
       "A set of hand‑carved walnut cooking spoons finished with food‑safe oil.",
     price: 54,

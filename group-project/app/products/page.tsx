@@ -4,8 +4,8 @@ export default async function ProductPage() {
   return (
     <>
       <div className="container-default"></div>
-      <section>
-        {/* Filters */}
+      <section className="text-center">
+        {/* Filters with display*/}
         <ProductFilter/>
       </section>
     </>

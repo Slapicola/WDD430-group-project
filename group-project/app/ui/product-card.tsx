@@ -45,5 +45,6 @@ export function Card({
       <p> Item Description: {description}</p>
       <p> Price: ${price}</p>
     </div>
+    
   );
 }

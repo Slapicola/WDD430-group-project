@@ -38,6 +38,15 @@ export default function LoginPage() {
       />
 
       <button className="btn-primary w-full">Login</button>
+      <div className="mt-6 text-center text-sm text-gray-600">
+        <span>New here? </span>
+        <a
+          href="/register"
+          className="font-semibold text-[var(--color-primary)] hover:underline"
+        >
+          Create an account
+        </a>
+      </div>
     </form>
   );
 }

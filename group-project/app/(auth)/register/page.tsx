@@ -15,6 +15,15 @@ export default function RegisterPage() {
       />
 
       <button className="btn-primary w-full">Create Account</button>
+      <div className="mt-6 text-center text-sm text-gray-600">
+        <span>Already have an account? </span>
+        <a
+          href="/login"
+          className="font-semibold text-[var(--color-primary)] hover:underline"
+        >
+          Login
+        </a>
+      </div>
     </form>
   );
 }

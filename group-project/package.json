@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "mongoose": "^9.2.1",
-    "next": "16.1.4",
     "@auth/core": "^0.34.3",
     "@heroicons/react": "^2.2.0",
     "bcrypt": "^6.0.0",
